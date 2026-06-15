@@ -1,0 +1,279 @@
+﻿@{
+    ViewData["Title"] = "Select Sensor";
+}
+
+<h4 class="mb-2 pb-2 fw-semibold text-secondary">@ViewData["Title"]</h4>
+
+<input type="text" id="search" placeholder="Buscar sensor... (ej: temperatura, fan, gpu)" class="form-control mb-3" />
+
+<div id="sensorTree">
+    <p>Cargando...</p>
+</div>
+
+<button id="applyBtn" type="button" class="btn btn-primary mt-3">Aplicar</button>
+<span id="applyStatus" style="margin-left: 10px; font-size: 14px;"></span>
+
+@section Styles {
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+}
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="~/js/tree.js"></script>
+    <script>
+
+        let allCheckboxes = [];
+
+        function buildTree(node, container, path) {
+            const li = document.createElement('li');
+            const row = document.createElement('div');
+            row.className = 'tree-row';
+
+            const hasChildren = node.children && node.children.length > 0;
+
+            const toggle = document.createElement('span');
+            toggle.textContent = hasChildren ? '▾' : ' ';
+            toggle.className = 'toggle';
+            row.appendChild(toggle);
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.checked = !node.hidden;
+            row.appendChild(checkbox);
+
+            const label = document.createElement('label');
+            label.textContent = ' ' + node.text;
+            row.appendChild(label);
+
+            li.appendChild(row);
+            li.dataset.text = node.text.toLowerCase();
+            li.dataset.path = path;
+
+            // Referencias directas para no depender de querySelector después
+            li._checkbox = checkbox;
+
+            allCheckboxes.push({ checkbox: checkbox, li: li, text: node.text.toLowerCase() });
+
+            let ul = null;
+            if (hasChildren) {
+                ul = document.createElement('ul');
+                ul.style.display = 'block';
+
+                node.children.forEach(function (child, i) {
+                    buildTree(child, ul, path + '/' + i);
+                });
+                li.appendChild(ul);
+
+                toggle.addEventListener('click', function () {
+                    const isOpen = ul.style.display !== 'none';
+                    ul.style.display = isOpen ? 'none' : 'block';
+                    toggle.textContent = isOpen ? '▸' : '▾';
+                });
+            }
+
+            li._ul = ul;
+
+            container.appendChild(li);
+            return { li: li, ul: ul, toggle: toggle, checkbox: checkbox };
+        }
+
+        // Marca/desmarca todos los descendientes de un nodo
+        function setChildrenChecked(li, checked) {
+            const ul = li._ul;
+            if (!ul) return;
+
+            Array.from(ul.children).forEach(function (childLi) {
+                const cb = childLi._checkbox;
+                cb.checked = checked;
+                cb.indeterminate = false;
+                setChildrenChecked(childLi, checked);
+            });
+        }
+
+        // Recalcula el estado checked/indeterminate de los ancestros, de abajo hacia arriba
+        function updateAncestors(li) {
+            const parentUl = li.parentElement;
+            if (!parentUl || parentUl.tagName !== 'UL') return;
+
+            const parentLi = parentUl.closest('li');
+            if (!parentLi) return;
+
+            const siblingCbs = Array.from(parentUl.children).map(function (childLi) {
+                return childLi._checkbox;
+            });
+
+            const allChecked = siblingCbs.every(function (cb) {
+                return cb.checked && !cb.indeterminate;
+            });
+            const noneChecked = siblingCbs.every(function (cb) {
+                return !cb.checked && !cb.indeterminate;
+            });
+
+            const parentCb = parentLi._checkbox;
+            parentCb.checked = allChecked;
+            parentCb.indeterminate = !allChecked && !noneChecked;
+
+            updateAncestors(parentLi);
+        }
+
+        let rootNode = null;
+        let rootLi = null;
+
+        function renderTree(data) {
+            allCheckboxes = [];
+            rootNode = data;
+
+            const container = document.getElementById('sensorTree');
+            container.innerHTML = '';
+
+            const rootUl = document.createElement('ul');
+            rootUl.id = 'rootList';
+            const result = buildTree(data, rootUl, '0');
+            rootLi = result.li;
+            container.appendChild(rootUl);
+        }
+
+        // Recorre el árbol de datos original junto con el árbol del DOM,
+        // actualizando "hidden" según el estado actual de cada checkbox.
+        // hidden = true significa "no marcado" (igual a como llegó del backend).
+        function buildUpdatedJson(node, li) {
+            const checkbox = li._checkbox;
+
+            const updatedNode = {
+                sensorId: node.sensorId,
+                text: node.text,
+                hidden: !checkbox.checked,
+                children: []
+            };
+
+            if (node.children && node.children.length > 0) {
+                const childLis = Array.from(li._ul.children);
+                updatedNode.children = node.children.map(function (childNode, i) {
+                    return buildUpdatedJson(childNode, childLis[i]);
+                });
+            }
+
+            return updatedNode;
+        }
+
+        async function applyChanges() {
+            const applyBtn = document.getElementById('applyBtn');
+            const statusEl = document.getElementById('applyStatus');
+
+            if (!rootNode || !rootLi) return;
+
+            const updatedJson = buildUpdatedJson(rootNode, rootLi);
+
+            applyBtn.disabled = true;
+            statusEl.textContent = 'Enviando...';
+            statusEl.style.color = 'var(--color-text-secondary)';
+
+            try {
+                const response = await fetch('/sensor/actualizar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(updatedJson)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Error al guardar: ' + response.status);
+                }
+
+                statusEl.textContent = 'Cambios aplicados correctamente.';
+                statusEl.style.color = 'green';
+            } catch (error) {
+                console.error('Error al aplicar cambios:', error);
+                statusEl.textContent = 'No se pudieron guardar los cambios.';
+                statusEl.style.color = 'red';
+            } finally {
+                applyBtn.disabled = false;
+            }
+        }
+
+        async function loadSensorTree() {
+            try {
+                const response = await fetch('/sensor/arbol/json');
+                if (!response.ok) {
+                    throw new Error('Error al obtener datos: ' + response.status);
+                }
+                const data = await response.json();
+                renderTree(data);
+            } catch (error) {
+                console.error('Error cargando árbol de sensores:', error);
+                document.getElementById('sensorTree').innerHTML = '<p>No se pudo cargar la información.</p>';
+            }
+        }
+
+        // Listener delegado: maneja el cambio de cualquier checkbox del árbol
+        document.getElementById('sensorTree').addEventListener('change', function (e) {
+            if (e.target.type !== 'checkbox') return;
+
+            const li = e.target.closest('li');
+            setChildrenChecked(li, e.target.checked);
+            updateAncestors(li);
+        });
+
+        // Buscador
+        document.getElementById('search').addEventListener('input', function (e) {
+            const term = e.target.value.toLowerCase().trim();
+
+            allCheckboxes.forEach(function (item) {
+                item.li.style.display = '';
+            });
+
+            if (!term) {
+                document.querySelectorAll('#sensorTree li').forEach(function (li) {
+                    const ul = li.querySelector('ul');
+                    const span = li.querySelector('span');
+                    if (ul) {
+                        ul.style.display = 'block';
+                        if (span) span.textContent = '▾';
+                    }
+                });
+                return;
+            }
+
+            allCheckboxes.forEach(function (item) {
+                const li = item.li;
+                const text = item.text;
+
+                const matches = text.includes(term);
+
+                const hasMatchingDescendant = Array.from(li.querySelectorAll('li'))
+                    .some(function (child) { return child.dataset.text.includes(term); });
+
+                const hasMatchingAncestor = (function () {
+                    let p = li.parentElement;
+                    while (p) {
+                        if (p.tagName === 'LI' && p.dataset.text && p.dataset.text.includes(term)) return true;
+                        p = p.parentElement;
+                    }
+                    return false;
+                })();
+
+                if (matches || hasMatchingDescendant || hasMatchingAncestor) {
+                    li.style.display = '';
+                    const ul = li.querySelector('ul');
+                    if (ul) {
+                        ul.style.display = 'block';
+                        const span = li.querySelector('span');
+                        if (span) span.textContent = '▾';
+                    }
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('applyBtn').addEventListener('click', applyChanges);
+
+        document.addEventListener('DOMContentLoaded', loadSensorTree);
+
+    
+    </script>
+}

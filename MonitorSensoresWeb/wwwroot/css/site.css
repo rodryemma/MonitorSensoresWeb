@@ -1,0 +1,81 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+
+/*.tree-root, .tree-root ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.tree-root {
+    padding-left: 0;
+}
+
+    .tree-root li {
+        margin: 4px 0;
+    }
+
+    .tree-root label {
+        cursor: pointer;
+        user-select: none;
+    }*/
+
+#sensorTree ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+#sensorTree #rootList {
+    padding-left: 0;
+}
+
+#sensorTree .tree-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+#sensorTree .toggle {
+    cursor: pointer;
+    width: 16px;
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+#sensorTree label {
+    font-size: 14px;
+    margin-bottom: 0;
+    cursor: pointer;
+}

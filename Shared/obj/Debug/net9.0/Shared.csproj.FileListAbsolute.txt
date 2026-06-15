@@ -1,0 +1,11 @@
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\bin\Debug\net9.0\Shared.deps.json
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\bin\Debug\net9.0\Shared.dll
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\bin\Debug\net9.0\Shared.pdb
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\obj\Debug\net9.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\obj\Debug\net9.0\Shared.AssemblyInfoInputs.cache
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\obj\Debug\net9.0\Shared.AssemblyInfo.cs
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\obj\Debug\net9.0\Shared.csproj.CoreCompileInputs.cache
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\obj\Debug\net9.0\Shared.dll
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\obj\Debug\net9.0\refint\Shared.dll
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\obj\Debug\net9.0\Shared.pdb
+Z:\Media\Repos\Programas NET\MonitorSensores\Shared\obj\Debug\net9.0\ref\Shared.dll

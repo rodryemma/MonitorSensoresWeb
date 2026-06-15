@@ -1,0 +1,451 @@
+{
+  "format": 1,
+  "restore": {
+    "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\MonitorSensoresWeb.csproj": {}
+  },
+  "projects": {
+    "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Rodry-Escritorio\\.nuget\\packages\\",
+        "outputPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Rodry-Escritorio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj"
+              },
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj",
+        "projectName": "Domain.Model",
+        "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj",
+        "packagesPath": "C:\\Users\\Rodry-Escritorio\\.nuget\\packages\\",
+        "outputPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Rodry-Escritorio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.DataAccess\\Infra.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.DataAccess\\Infra.DataAccess.csproj",
+        "projectName": "Infra.DataAccess",
+        "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.DataAccess\\Infra.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Rodry-Escritorio\\.nuget\\packages\\",
+        "outputPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Rodry-Escritorio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.ExternalServices\\Infra.ExternalServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.ExternalServices\\Infra.ExternalServices.csproj",
+        "projectName": "Infra.ExternalServices",
+        "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.ExternalServices\\Infra.ExternalServices.csproj",
+        "packagesPath": "C:\\Users\\Rodry-Escritorio\\.nuget\\packages\\",
+        "outputPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.ExternalServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Rodry-Escritorio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj"
+              },
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\MonitorSensoresWeb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\MonitorSensoresWeb.csproj",
+        "projectName": "MonitorSensoresWeb",
+        "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\MonitorSensoresWeb.csproj",
+        "packagesPath": "C:\\Users\\Rodry-Escritorio\\.nuget\\packages\\",
+        "outputPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Rodry-Escritorio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Application.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Application.csproj"
+              },
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Domain.Model.csproj"
+              },
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.DataAccess\\Infra.DataAccess.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.DataAccess\\Infra.DataAccess.csproj"
+              },
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.ExternalServices\\Infra.ExternalServices.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.ExternalServices\\Infra.ExternalServices.csproj"
+              },
+              "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj": {
+                "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\Rodry-Escritorio\\.nuget\\packages\\",
+        "outputPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Rodry-Escritorio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.314/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

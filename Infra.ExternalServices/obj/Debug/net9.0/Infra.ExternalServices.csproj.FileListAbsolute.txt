@@ -1,0 +1,17 @@
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\bin\Debug\net9.0\Infra.ExternalServices.deps.json
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\bin\Debug\net9.0\Infra.ExternalServices.dll
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\bin\Debug\net9.0\Infra.ExternalServices.pdb
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\bin\Debug\net9.0\Domain.Model.dll
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\bin\Debug\net9.0\Shared.dll
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\bin\Debug\net9.0\Domain.Model.pdb
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\bin\Debug\net9.0\Shared.pdb
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.csproj.AssemblyReference.cache
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.AssemblyInfoInputs.cache
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.AssemblyInfo.cs
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.csproj.CoreCompileInputs.cache
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.Ex.8DA0AEFD.Up2Date
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.dll
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\refint\Infra.ExternalServices.dll
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.pdb
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\ref\Infra.ExternalServices.dll
