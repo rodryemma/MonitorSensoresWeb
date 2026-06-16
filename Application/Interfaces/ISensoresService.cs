@@ -12,11 +12,14 @@ namespace Application.Interfaces
     public interface ISensoresService
     {
         Task<OperationResult<List<LHMSensorDBModel>>> BuscarSensorFullAsync();
+        Task<OperationResult<List<LHMSensorDBModel>>> BuscarSensorHiddenAsync(bool hidden);
         Task<OperationResult<int>> InsertarSensorAsync(LHMSensorDBModel lHMSensorDBModel);
         Task<OperationResult<int>> InsertarSensoresAsync(List<LHMSensorDBModel> listlHMSensor);
         Task<OperationResult<int>> GestionarEstadosSensores(LHMSensorDTO lHMSensor);
         Task<OperationResult<int>> EliminarFullSensorAsync();
         Task<OperationResult<LHMSensorDTO>> EstadoActualSensores();
+        Task<OperationResult<Dictionary<string, LHMSensorResponseDTO>>> InformeActualSensores();
+
 
     }
 }

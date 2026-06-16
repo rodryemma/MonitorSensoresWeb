@@ -15,3 +15,4 @@ Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\ne
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\refint\Infra.ExternalServices.dll
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.pdb
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\ref\Infra.ExternalServices.dll
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.sourcelink.json

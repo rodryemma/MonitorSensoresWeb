@@ -21,6 +21,12 @@ namespace MonitorSensoresWeb.Controllers
             return View();
         }
 
+        [HttpGet("sensor/diagrama")]
+        public ActionResult SensorDiagrama()
+        {
+            return View();
+        }
+
         [HttpGet("sensor/json")]
         public async Task<IActionResult> GetSensores()
         {
@@ -34,12 +40,6 @@ namespace MonitorSensoresWeb.Controllers
         [HttpGet("sensor/arbol/json")]
         public async Task<IActionResult> GetArbolSensores()
         {
-            //var sensoresArbol = await _libreHardwareMonitorService.ObtenerSensoresArbolFull();
-            //if (!sensoresArbol.Success) { return BadRequest(sensoresArbol.Message); }
-
-            //var sensoresEstados = await _sensoresService.BuscarSensorFullAsync();
-            //if (!sensoresEstados.Success) { return BadRequest(sensoresEstados.Message); }
-
             var sensoresEstados = await _sensoresService.EstadoActualSensores();
             if (!sensoresEstados.Success) { return BadRequest(sensoresEstados.Message); }
 
@@ -51,6 +51,15 @@ namespace MonitorSensoresWeb.Controllers
         public async Task<IActionResult> GetEstadoSensores()
         {
             var sensores = await _libreHardwareMonitorService.ObtenerEstadosAsync();
+            if (!sensores.Success) { return BadRequest(sensores.Message); }
+
+            return Json(sensores.Data);
+
+        }
+        [HttpGet("sensor/informe/json")]
+        public async Task<IActionResult> GetInformeSensores()
+        {
+            var sensores = await _sensoresService.InformeActualSensores();
             if (!sensores.Success) { return BadRequest(sensores.Message); }
 
             return Json(sensores.Data);

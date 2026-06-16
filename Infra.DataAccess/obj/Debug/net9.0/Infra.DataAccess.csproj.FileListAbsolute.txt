@@ -15,3 +15,4 @@ Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\I
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\refint\Infra.DataAccess.dll
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\Infra.DataAccess.pdb
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\ref\Infra.DataAccess.dll
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\Infra.DataAccess.sourcelink.json
