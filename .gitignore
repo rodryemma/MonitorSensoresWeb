@@ -1,0 +1,35 @@
+# Archivos y carpetas de Visual Studio
+.vs/
+.vscode/
+.idea/
+
+# Archivos de usuario de Visual Studio
+user.config
+
+# Archivos generados en la compilación
+bin/
+obj/
+
+# Archivos de salida específicos de compilación
+*.exe
+*.dll
+*.pdb
+*.app
+*.apk
+*.nupkg
+
+# Archivos de configuración personal de Visual Studio
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Archivos de sistema
+Thumbs.db
+Desktop.ini
+
+# Archivos de caché
+*.log
+*.vspscc
+
+
