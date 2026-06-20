@@ -10,9 +10,9 @@ Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\ne
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.AssemblyInfoInputs.cache
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.AssemblyInfo.cs
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.csproj.CoreCompileInputs.cache
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.sourcelink.json
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.Ex.8DA0AEFD.Up2Date
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.dll
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\refint\Infra.ExternalServices.dll
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.pdb
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\ref\Infra.ExternalServices.dll
-Z:\Media\Repos\Programas NET\MonitorSensores\Infra.ExternalServices\obj\Debug\net9.0\Infra.ExternalServices.sourcelink.json

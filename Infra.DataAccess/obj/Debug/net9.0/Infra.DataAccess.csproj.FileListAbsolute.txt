@@ -10,9 +10,9 @@ Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\I
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\Infra.DataAccess.AssemblyInfoInputs.cache
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\Infra.DataAccess.AssemblyInfo.cs
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\Infra.DataAccess.csproj.CoreCompileInputs.cache
+Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\Infra.DataAccess.sourcelink.json
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\Infra.Da.116569D7.Up2Date
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\Infra.DataAccess.dll
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\refint\Infra.DataAccess.dll
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\Infra.DataAccess.pdb
 Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\ref\Infra.DataAccess.dll
-Z:\Media\Repos\Programas NET\MonitorSensores\Infra.DataAccess\obj\Debug\net9.0\Infra.DataAccess.sourcelink.json

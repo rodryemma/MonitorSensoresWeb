@@ -3,37 +3,27 @@
   "WorkspaceRootPath": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3CD011E-2D62-482D-8EE7-D71D8CC46CBF}|..\\Application\\Application.csproj|z:\\media\\repos\\programas net\\monitorsensores\\application\\services\\sensoresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|z:\\media\\repos\\programas net\\monitorsensores\\monitorsensoresweb\\views\\sensor\\sensordiagrama.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|solutionrelative:views\\sensor\\sensordiagrama.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3CD011E-2D62-482D-8EE7-D71D8CC46CBF}|..\\Application\\Application.csproj|z:\\media\\repos\\programas net\\monitorsensores\\application\\services\\librehardwaremonitorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|z:\\media\\repos\\programas net\\monitorsensores\\monitorsensoresweb\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3CD011E-2D62-482D-8EE7-D71D8CC46CBF}|..\\Application\\Application.csproj|z:\\media\\repos\\programas net\\monitorsensores\\application\\dtos\\lhmsensordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B563F860-AC45-4153-A6EA-7045A000D42F}|..\\Domain.Model\\Domain.Model.csproj|z:\\media\\repos\\programas net\\monitorsensores\\domain.model\\interface\\isensoresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|z:\\media\\repos\\programas net\\monitorsensores\\monitorsensoresweb\\controllers\\sensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|solutionrelative:controllers\\sensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3CD011E-2D62-482D-8EE7-D71D8CC46CBF}|..\\Application\\Application.csproj|z:\\media\\repos\\programas net\\monitorsensores\\application\\dtos\\lhmsensorresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F3CD011E-2D62-482D-8EE7-D71D8CC46CBF}|..\\Application\\Application.csproj|z:\\media\\repos\\programas net\\monitorsensores\\application\\interfaces\\isensoresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|z:\\media\\repos\\programas net\\monitorsensores\\monitorsensoresweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|z:\\media\\repos\\programas net\\monitorsensores\\monitorsensoresweb\\views\\sensor\\sensorcheck.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|solutionrelative:views\\sensor\\sensorcheck.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B563F860-AC45-4153-A6EA-7045A000D42F}|..\\Domain.Model\\Domain.Model.csproj|z:\\media\\repos\\programas net\\monitorsensores\\domain.model\\interface\\isensoresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58E4F1D2-A115-467B-8A04-C74DE01FD50F}|..\\Infra.DataAccess\\Infra.DataAccess.csproj|z:\\media\\repos\\programas net\\monitorsensores\\infra.dataaccess\\repositories\\sensoresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|z:\\media\\repos\\programas net\\monitorsensores\\monitorsensoresweb\\views\\sensor\\sensordiagrama.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|solutionrelative:views\\sensor\\sensordiagrama.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|z:\\media\\repos\\programas net\\monitorsensores\\monitorsensoresweb\\controllers\\sensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4CEF2A3-AB1F-4B51-8B58-41901A521B5A}|MonitorSensoresWeb.csproj|solutionrelative:controllers\\sensorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,11 +33,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "SensorDiagrama.cshtml",
+              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Views\\Sensor\\SensorDiagrama.cshtml",
+              "RelativeDocumentMoniker": "Views\\Sensor\\SensorDiagrama.cshtml",
+              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Views\\Sensor\\SensorDiagrama.cshtml",
+              "RelativeToolTip": "Views\\Sensor\\SensorDiagrama.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-19T13:18:10.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAAJUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-19T16:32:59.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SensorController.cs",
+              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Controllers\\SensorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SensorController.cs",
+              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Controllers\\SensorController.cs",
+              "RelativeToolTip": "Controllers\\SensorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T13:10:02.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAhwBIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-19T12:30:16.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SensorCheck.cshtml",
+              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Views\\Sensor\\SensorCheck.cshtml",
+              "RelativeDocumentMoniker": "Views\\Sensor\\SensorCheck.cshtml",
+              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Views\\Sensor\\SensorCheck.cshtml",
+              "RelativeToolTip": "Views\\Sensor\\SensorCheck.cshtml",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAAA0AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-15T15:29:37.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ISensoresRepository.cs",
               "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Domain.Model\\Interface\\ISensoresRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain.Model\\Interface\\ISensoresRepository.cs",
@@ -55,125 +106,7 @@
               "RelativeToolTip": "..\\Domain.Model\\Interface\\ISensoresRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-16T19:10:15.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "sensorCheck.cshtml",
-              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Views\\Sensor\\sensorCheck.cshtml",
-              "RelativeDocumentMoniker": "Views\\Sensor\\sensorCheck.cshtml",
-              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Views\\Sensor\\sensorCheck.cshtml",
-              "RelativeToolTip": "Views\\Sensor\\sensorCheck.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-15T15:29:37.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SensoresService.cs",
-              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Services\\SensoresService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\SensoresService.cs",
-              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Services\\SensoresService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\SensoresService.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAawDIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T03:38:49.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LHMSensorDTO.cs",
-              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\DTOs\\LHMSensorDTO.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\LHMSensorDTO.cs",
-              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\DTOs\\LHMSensorDTO.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\LHMSensorDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T15:55:02.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LibreHardwareMonitorService.cs",
-              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Services\\LibreHardwareMonitorService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\LibreHardwareMonitorService.cs",
-              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Services\\LibreHardwareMonitorService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\LibreHardwareMonitorService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAlwBoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T15:20:21.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SensoresRepository.cs",
-              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.DataAccess\\Repositories\\SensoresRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infra.DataAccess\\Repositories\\SensoresRepository.cs",
-              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Infra.DataAccess\\Repositories\\SensoresRepository.cs",
-              "RelativeToolTip": "..\\Infra.DataAccess\\Repositories\\SensoresRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T04:02:00.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SensorController.cs",
-              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Controllers\\SensorController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SensorController.cs",
-              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Controllers\\SensorController.cs",
-              "RelativeToolTip": "Controllers\\SensorController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAIwD0AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T23:27:18.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LHMSensorResponseDTO.cs",
-              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\DTOs\\LHMSensorResponseDTO.cs",
-              "RelativeDocumentMoniker": "..\\Application\\DTOs\\LHMSensorResponseDTO.cs",
-              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\DTOs\\LHMSensorResponseDTO.cs",
-              "RelativeToolTip": "..\\Application\\DTOs\\LHMSensorResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-16T19:14:57.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ISensoresService.cs",
-              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Interfaces\\ISensoresService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\ISensoresService.cs",
-              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\Application\\Interfaces\\ISensoresService.cs",
-              "RelativeToolTip": "..\\Application\\Interfaces\\ISensoresService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-16T19:30:48.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SensorDiagrama.cshtml",
-              "DocumentMoniker": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Views\\Sensor\\SensorDiagrama.cshtml",
-              "RelativeDocumentMoniker": "Views\\Sensor\\SensorDiagrama.cshtml",
-              "ToolTip": "Z:\\Media\\Repos\\Programas NET\\MonitorSensores\\MonitorSensoresWeb\\Views\\Sensor\\SensorDiagrama.cshtml",
-              "RelativeToolTip": "Views\\Sensor\\SensorDiagrama.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-16T18:51:01.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-16T19:10:15.32Z"
             }
           ]
         }

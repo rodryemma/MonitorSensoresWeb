@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Infra.ExternalServices")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8b3f0a5ce9fbd1d5172a661710656fb0f710afc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11084517b9c7e96bd1dfd2e045bce0fa931536a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Infra.ExternalServices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Infra.ExternalServices")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

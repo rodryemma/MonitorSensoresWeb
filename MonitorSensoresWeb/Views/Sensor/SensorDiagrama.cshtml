@@ -1,20 +1,246 @@
 ﻿
 @{
-    ViewData["Title"] = "Sensores";
+    ViewData["Title"] = "Monitor de hardware";
 }
 
-<h4 class="mb-2 pb-2 fw-semibold text-secondary">@ViewData["Title"]</h4>
+<header>
+    <h1>@ViewData["Title"]</h1>
+    <div class="status">
+        <span class="dot" id="liveDot"></span>
+        <span id="liveText">conectando…</span>
+    </div>
+</header>
+
+<div id="sections"></div>
+
 
 @section Styles {
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />    
 }
 
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
     <script>
+        /* =========================================================
+           1) CONFIGURACIÓN DE INTEGRACIÓN
+           ========================================================= */
+        const ENDPOINT_URL = "/sensor/informe/json";   
+        const REFRESH_MS   = 1000;                  
 
+        /* =========================================================
+           2) ICONOS por categoría de hardware 
+           ========================================================= */
+        const ICONS = {
+          chip: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>',
+          ram:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="10" rx="1.5"/><path d="M7 7v10M11 7v10M15 7v10"/></svg>',
+          disk: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><path d="M12 3v3M21 12h-3"/></svg>',
+          board:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1.5"/><rect x="7" y="7" width="4" height="4"/><path d="M14 7h4M14 11h4M7 14h4M14 14h4M7 17h11"/></svg>',
+          net:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 12l10-6M7 12l10 6"/></svg>',
+          generic:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/></svg>'
+        };
+
+        const CATEGORY_META = {
+          "gpu-amd":    { label: "GPU AMD",        icon: ICONS.chip },
+          "gpu-nvidia": { label: "GPU NVIDIA",     icon: ICONS.chip },
+          "intelcpu":   { label: "CPU Intel",      icon: ICONS.chip },
+          "amdcpu":     { label: "CPU AMD",        icon: ICONS.chip },
+          "ram":        { label: "Memoria RAM",    icon: ICONS.ram },
+          "hdd":        { label: "Almacenamiento (HDD)", icon: ICONS.disk },
+          "nvme":       { label: "Almacenamiento (NVMe)", icon: ICONS.disk },
+          "lpc":        { label: "Placa madre",    icon: ICONS.board },
+          "nic":        { label: "Red",            icon: ICONS.net }
+        };
+        function categoryMeta(cat){ return CATEGORY_META[cat] || { label: cat, icon: ICONS.generic }; }
+
+        /* =========================================================
+           3) PARSEO del JSON
+           ========================================================= */
+        function parsePath(key){
+          const p = key.split("/").filter(Boolean);
+          return { category:p[0], device:p[1] ?? "0", metricType:p[2], metricIndex:p[3] };
+        }
+        function parseMagnitude(str){
+          if(!str) return { num:0, unit:"" };
+          const m = String(str).trim().match(/^(-?[0-9]+(?:[.,][0-9]+)?)\s*(.*)$/);
+          if(!m) return { num:0, unit:str };
+          return { num: parseFloat(m[1].replace(",", ".")), unit: m[2].trim() };
+        }
+        function fmtBack(num, unit){
+          return num.toFixed(1).replace(".", ",") + (unit ? " " + unit : "");
+        }
+
+        const UNIT_MULTIPLIERS = {
+          "B":1, "B/s":1,
+          "KB":1024, "KB/s":1024,
+          "MB":1024**2, "MB/s":1024**2,
+          "GB":1024**3, "GB/s":1024**3,
+          "TB":1024**4, "TB/s":1024**4
+        };
+        function normalizeMagnitude(mag){
+          const mult = UNIT_MULTIPLIERS[mag.unit];
+          return mag.num * (mult ?? 1); 
+        }
+
+        function buildTree(data){
+          const tree = new Map();
+          for(const [key, sensor] of Object.entries(data)){
+            if(sensor.hidden) continue;
+            const { category, device } = parsePath(key);
+            if(!tree.has(category)) tree.set(category, new Map());
+            const devices = tree.get(category);
+            if(!devices.has(device)) devices.set(device, []);
+            devices.get(device).push({ key, sensor });
+          }
+          return tree;
+        }
+
+        /* =========================================================
+           4) RENDER
+           ========================================================= */
+        const gaugeRegistry = new Map(); 
+        function idFor(key){ return "g_" + key.replace(/[^a-zA-Z0-9]/g, "_"); }
+
+        function ensureStructure(tree){
+          const root = document.getElementById("sections");
+          for(const [category, devices] of tree){
+            let section = document.getElementById("sec_" + category);
+            if(!section){
+              section = document.createElement("section");
+              section.id = "sec_" + category;
+              const meta = categoryMeta(category);
+              section.innerHTML =
+                '<div class="category-head">' + meta.icon + '<h2>' + meta.label + '</h2></div>' +
+                '<div class="devices" id="dev_' + category + '"></div>';
+              root.appendChild(section);
+            }
+            const devicesContainer = document.getElementById("dev_" + category);
+            for(const [device, metrics] of devices){
+              const devId = "device_" + category + "_" + device;
+              let devCard = document.getElementById(devId);
+              if(!devCard){
+                devCard = document.createElement("div");
+                devCard.className = "device-card";
+                devCard.id = devId;
+                devCard.innerHTML =
+                  '<div class="gauges" id="' + devId + '_gauges"></div>';
+                devicesContainer.appendChild(devCard);
+              }
+              const gaugesContainer = document.getElementById(devId + "_gauges");
+              for(const { key, sensor } of metrics){
+                const gid = idFor(key);
+                if(!document.getElementById(gid)){
+                  const tile = document.createElement("div");
+                  tile.className = "gauge-tile";
+                  tile.id = gid;
+                  tile.innerHTML =
+                    '<div class="gauge-title">' + sensor.text + '</div>' +
+                    '<div id="' + gid + '_chart"></div>';
+                  gaugesContainer.appendChild(tile);
+                }
+              }
+            }
+          }
+        }
+
+        function colorFor(sensor, percent){
+          if(sensor.type === "Temperature"){
+            if(percent >= 90) return "#F87171";
+            if(percent >= 70) return "#FBBF24";
+            return "#38BDF8";
+          }
+          return "#2DD4BF";
+        }
+
+        function updateGauge(key, sensor){
+          const vMin = parseMagnitude(sensor.min);
+          const vMax = parseMagnitude(sensor.max);
+          const vVal = parseMagnitude(sensor.value);
+          const nMin = normalizeMagnitude(vMin);
+          const nMax = normalizeMagnitude(vMax);
+          const nVal = normalizeMagnitude(vVal);
+          let percent = 0;
+          if(nMax !== nMin) percent = ((nVal - nMin) / (nMax - nMin)) * 100;
+          const color = colorFor(sensor, percent);
+          const display = vVal.num.toFixed(1) + " " + vVal.unit;
+
+          const existing = gaugeRegistry.get(key);
+          if(existing){
+            existing.updateOptions({ colors:[color] }, false, false);
+            existing.updateSeries([Math.round(percent)]);
+            const labelEl = document.querySelector("#" + idFor(key) + "_chart .apexcharts-datalabel-value");
+            if(labelEl) labelEl.textContent = display;
+          } else {
+            const options = {
+              chart:{ type:"radialBar", height:140, sparkline:{ enabled:true } },
+              series:[Math.round(percent)],
+              colors:[color],
+              plotOptions:{
+                radialBar:{
+                  hollow:{ size:"58%" },
+                  track:{ background:"rgba(255,255,255,0.06)" },
+                  dataLabels:{
+                    name:{ show:false },
+                    value:{
+                      show:true,
+                      offsetY:4,
+                      fontSize:"12px",
+                      fontFamily:"JetBrains Mono, monospace",
+                      color:"#E7EAEE",
+                      formatter: function(){ return display; }
+                    }
+                  }
+                }
+              },
+              stroke:{ lineCap:"round" }
+            };
+            const chart = new ApexCharts(document.getElementById(idFor(key) + "_chart"), options);
+            chart.render();
+            gaugeRegistry.set(key, chart);
+          }
+        }
+
+        /* =========================================================
+           5) OBTENCIÓN DE DATOS
+           ========================================================= */
+        async function fetchSensorData(){
+          const res = await fetch(ENDPOINT_URL, { cache:"no-store" });
+          if(!res.ok) throw new Error("HTTP " + res.status);
+          return await res.json();
+        }
+               
+
+        /* =========================================================
+           6) LOOP DE ACTUALIZACIÓN
+           ========================================================= */
+        function setLiveStatus(ok){
+          document.getElementById("liveDot").className = "dot" + (ok ? "" : " off");
+          document.getElementById("liveText").textContent =
+            (ok ? "en vivo" : "sin conexión") + " · " + new Date().toLocaleTimeString();
+        }
+
+        async function refresh(){
+          try{
+            const data = await fetchSensorData();
+            const tree = buildTree(data);
+            ensureStructure(tree);
+            for(const [key, sensor] of Object.entries(data)){
+              if(sensor.hidden) continue;
+              updateGauge(key, sensor);
+            }
+            setLiveStatus(true);
+          } catch(e){
+            console.error("Error actualizando sensores:", e);
+            setLiveStatus(false);
+          }
+        }
+
+        refresh();
+        setInterval(refresh, REFRESH_MS);
     </script>
 }

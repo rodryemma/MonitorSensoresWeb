@@ -34,10 +34,17 @@ app.UseAuthorization();
 
 app.MapStaticAssets();
 
+app.MapControllers();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/sensor/diagrama");
+    return Task.CompletedTask;
+});
 
 app.Run();

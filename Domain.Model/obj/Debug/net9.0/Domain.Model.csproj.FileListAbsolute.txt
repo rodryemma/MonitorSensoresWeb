@@ -8,9 +8,9 @@ Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\Domai
 Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\Domain.Model.AssemblyInfoInputs.cache
 Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\Domain.Model.AssemblyInfo.cs
 Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\Domain.Model.csproj.CoreCompileInputs.cache
+Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\Domain.Model.sourcelink.json
 Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\Domain.M.EE8C4666.Up2Date
 Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\Domain.Model.dll
 Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\refint\Domain.Model.dll
 Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\Domain.Model.pdb
 Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\ref\Domain.Model.dll
-Z:\Media\Repos\Programas NET\MonitorSensores\Domain.Model\obj\Debug\net9.0\Domain.Model.sourcelink.json

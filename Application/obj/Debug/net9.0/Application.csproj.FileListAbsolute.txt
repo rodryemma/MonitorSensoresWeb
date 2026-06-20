@@ -10,9 +10,9 @@ Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\Applic
 Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\Application.AssemblyInfoInputs.cache
 Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\Application.AssemblyInfo.cs
 Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\Application.csproj.CoreCompileInputs.cache
+Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\Application.sourcelink.json
 Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\Applicat.44B5EDA2.Up2Date
 Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\Application.dll
 Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\refint\Application.dll
 Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\Application.pdb
 Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\ref\Application.dll
-Z:\Media\Repos\Programas NET\MonitorSensores\Application\obj\Debug\net9.0\Application.sourcelink.json
